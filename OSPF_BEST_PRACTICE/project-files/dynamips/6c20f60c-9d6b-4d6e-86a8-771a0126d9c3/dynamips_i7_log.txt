@@ -1,0 +1,52 @@
+Aug 10 09:03:05.203 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Aug 10 09:03:05.204 HYPERVISOR: Started on IP = localhost, TCP port = 17183.
+Aug 10 09:03:05.690 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 10 09:03:05.691 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips 
+Aug 10 09:03:05.691 GENERAL: working_dir=C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips
+Aug 10 09:03:05.692 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\f5b5f50d-2b25-4747-bec8-c6c277d55f58 
+Aug 10 09:03:05.693 GENERAL: working_dir=C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\f5b5f50d-2b25-4747-bec8-c6c277d55f58
+Aug 10 09:03:05.694 HYPERVISOR: exec_cmd: vm create R6 6 c7200 
+Aug 10 09:03:05.698 VM: VM R6 created.
+Aug 10 09:03:05.699 HYPERVISOR: exec_cmd: vm set_con_tcp_port R6 5006 
+Aug 10 09:03:05.700 HYPERVISOR: exec_cmd: c7200 get_mac_addr R6 
+Aug 10 09:03:05.701 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 09:03:05.702 HYPERVISOR: exec_cmd: vm slot_add_binding R6 0 0 C7200-IO-FE 
+Aug 10 09:03:05.703 HYPERVISOR: exec_cmd: vm set_disk0 R6 0 
+Aug 10 09:03:05.704 HYPERVISOR: exec_cmd: vm set_exec_area R6 64 
+Aug 10 09:03:05.705 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 09:03:05.705 HYPERVISOR: exec_cmd: vm set_idle_pc R6 0x606df838 
+Aug 10 09:03:05.708 HYPERVISOR: exec_cmd: vm set_ios R6 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 09:03:05.709 HYPERVISOR: exec_cmd: c7200 set_mac_addr R6 ca06.5054.0000 
+Aug 10 09:03:05.710 HYPERVISOR: exec_cmd: vm set_nvram R6 512 
+Aug 10 09:03:05.711 HYPERVISOR: exec_cmd: vm set_ram R6 512 
+Aug 10 09:03:05.712 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 09:03:05.712 HYPERVISOR: exec_cmd: vm slot_add_binding R6 1 0 PA-GE 
+Aug 10 09:03:05.713 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 09:03:05.714 HYPERVISOR: exec_cmd: vm slot_add_binding R6 2 0 PA-GE 
+Aug 10 09:03:07.308 HYPERVISOR: exec_cmd: nio create_udp udp-188975c8-1e30-4a6f-bef7-8628a46bef66 10016 127.0.0.1 10017 
+Aug 10 09:03:07.535 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 1 0 udp-188975c8-1e30-4a6f-bef7-8628a46bef66 
+Aug 10 09:03:07.537 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 09:03:07.597 HYPERVISOR: exec_cmd: nio create_udp udp-6535bcd1-2c17-4587-b903-365a9aecb435 10020 127.0.0.1 10021 
+Aug 10 09:03:07.600 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R6 2 0 udp-6535bcd1-2c17-4587-b903-365a9aecb435 
+Aug 10 09:03:07.601 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 09:11:10.925 HYPERVISOR: exec_cmd: vm set_ghost_status R6 2 
+Aug 10 09:11:10.925 HYPERVISOR: exec_cmd: vm set_ghost_file R6 C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\c7200-adventerprisek9-mz.124-24.T5.image-512.ghost 
+Aug 10 09:11:10.926 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 09:11:10.926 HYPERVISOR: exec_cmd: vm set_config R6 configs\i6_startup-config.cfg 
+Aug 10 09:11:10.926 HYPERVISOR: exec_cmd: vm start R6 
+Aug 10 09:24:17.660 HYPERVISOR: exec_cmd: vm set_ios R6 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 09:24:26.103 HYPERVISOR: exec_cmd: vm set_ios R6 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 09:24:39.521 HYPERVISOR: exec_cmd: vm set_ios R6 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 11:20:53.701 HYPERVISOR: exec_cmd: vm set_ios R6 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 11:21:17.725 HYPERVISOR: exec_cmd: vm extract_config R6 
+Aug 10 12:06:50.177 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 12:06:50.178 HYPERVISOR: exec_cmd: vm stop R6 
+Aug 10 12:06:50.301 VM: VM R6 shutdown.
+Aug 10 12:06:50.302 HYPERVISOR: exec_cmd: vm extract_config R6 
+Aug 10 12:06:51.201 HYPERVISOR: exec_cmd: vm get_status R6 
+Aug 10 12:06:51.201 HYPERVISOR: exec_cmd: vm extract_config R6 
+Aug 10 12:06:51.202 HYPERVISOR: exec_cmd: vm delete R6 
+Aug 10 12:06:51.202 VM: VM R6 destroyed.
+Aug 10 12:06:51.203 HYPERVISOR: exec_cmd: hypervisor stop 
+Aug 10 12:06:51.635 HYPERVISOR: Stopped.
+Aug 10 12:06:51.635 GENERAL: reset done.

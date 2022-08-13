@@ -1,0 +1,125 @@
+Best practice
+
+Create the area 0 as a backbone network that allow share packets to all the areas.
+No use more of 50 routers per area.
+Set-up passive interface for all the interfaces to avoid risk. 
+Established authentication at least in the backbone area
+Is not necessary keep the same Process ID in all the routers but is a good practice.
+Configure the loopback is important to keep identificate each router.
+
+--------------Configuration R1---------------
+
+interface Loopback0
+ ip address 1.1.1.1 255.255.255.255
+!
+interface FastEthernet0/0
+ no ip address
+ shutdown
+ duplex half
+!
+interface GigabitEthernet1/0
+ ip address 10.0.0.1 255.255.255.240
+ ip ospf message-digest-key 10 md5 mypassword
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ ip address 10.10.10.1 255.255.255.252
+ ip ospf message-digest-key 10 md5 mypassword
+ ip ospf 10 area 1
+ negotiation auto
+!
+interface GigabitEthernet3/0
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet4/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+router ospf 10
+ router-id 1.1.1.1
+ log-adjacency-changes
+ area 0 authentication message-digest
+ area 1 authentication message-digest
+ passive-interface default
+ no passive-interface GigabitEthernet1/0
+ no passive-interface GigabitEthernet2/0
+ network 10.0.0.0 0.0.0.15 area 0
+
+
+ 
+--------------Configuration R2---------------
+interface Loopback0
+ ip address 2.2.2.2 255.255.255.255
+!
+interface FastEthernet0/0
+ no ip address
+ shutdown
+ duplex half
+!
+interface GigabitEthernet1/0
+ ip address 10.0.0.2 255.255.255.240
+ ip ospf message-digest-key 10 md5 mypassword
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ ip address 10.10.10.5 255.255.255.252
+ ip ospf 10 area 2
+ negotiation auto
+!
+interface GigabitEthernet3/0
+ no ip address
+ negotiation auto
+!
+interface GigabitEthernet4/0
+ no ip address
+ shutdown
+ negotiation auto
+!
+router ospf 10
+ log-adjacency-changes
+ area 0 authentication message-digest
+ area 2 virtual-link 8.8.8.8
+ passive-interface default
+ no passive-interface GigabitEthernet1/0
+ no passive-interface GigabitEthernet2/0
+ network 10.0.0.0 0.0.0.15 area 0
+!
+ip forward-protocol nd
+no ip http server
+no ip http secure-server
+
+
+
+--------------Configuration R4---------------
+
+interface Loopback0
+ ip address 4.4.4.4 255.255.255.255
+!
+interface FastEthernet0/0
+ no ip address
+ shutdown
+ duplex half
+!
+interface GigabitEthernet1/0
+ ip address 10.10.10.2 255.255.255.252
+ ip ospf message-digest-key 10 md5 mypassword
+ ip ospf 10 area 1
+ negotiation auto
+!
+interface GigabitEthernet2/0
+ ip address 192.168.1.1 255.255.255.0
+ ip ospf 10 area 1
+ negotiation auto
+!
+router ospf 10
+ log-adjacency-changes
+ area 1 authentication message-digest
+ passive-interface default
+ no passive-interface GigabitEthernet1/0
+ no passive-interface GigabitEthernet2/0
+
+
+
+ 

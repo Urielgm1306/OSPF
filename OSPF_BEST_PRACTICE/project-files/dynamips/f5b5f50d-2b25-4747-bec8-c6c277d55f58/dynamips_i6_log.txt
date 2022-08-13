@@ -1,0 +1,48 @@
+Aug 10 09:03:04.665 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Aug 10 09:03:04.665 HYPERVISOR: Started on IP = localhost, TCP port = 17180.
+Aug 10 09:03:05.153 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 10 09:03:05.153 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips 
+Aug 10 09:03:05.153 GENERAL: working_dir=C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips
+Aug 10 09:03:05.154 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\fe91d79c-3bb6-4c28-ba8c-ed857fbe4199 
+Aug 10 09:03:05.155 GENERAL: working_dir=C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\fe91d79c-3bb6-4c28-ba8c-ed857fbe4199
+Aug 10 09:03:05.155 HYPERVISOR: exec_cmd: vm create R5 5 c7200 
+Aug 10 09:03:05.156 VM: VM R5 created.
+Aug 10 09:03:05.157 HYPERVISOR: exec_cmd: vm set_con_tcp_port R5 5005 
+Aug 10 09:03:05.157 HYPERVISOR: exec_cmd: c7200 get_mac_addr R5 
+Aug 10 09:03:05.157 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 09:03:05.157 HYPERVISOR: exec_cmd: vm slot_add_binding R5 0 0 C7200-IO-FE 
+Aug 10 09:03:05.157 HYPERVISOR: exec_cmd: vm set_disk0 R5 0 
+Aug 10 09:03:05.157 HYPERVISOR: exec_cmd: vm set_exec_area R5 64 
+Aug 10 09:03:05.158 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 09:03:05.158 HYPERVISOR: exec_cmd: vm set_idle_pc R5 0x606df838 
+Aug 10 09:03:05.158 HYPERVISOR: exec_cmd: vm set_ios R5 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 09:03:05.159 HYPERVISOR: exec_cmd: c7200 set_mac_addr R5 ca05.0bec.0000 
+Aug 10 09:03:05.159 HYPERVISOR: exec_cmd: vm set_nvram R5 512 
+Aug 10 09:03:05.159 HYPERVISOR: exec_cmd: vm set_ram R5 512 
+Aug 10 09:03:05.160 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 09:03:05.160 HYPERVISOR: exec_cmd: vm slot_add_binding R5 1 0 PA-GE 
+Aug 10 09:03:05.160 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 09:03:05.160 HYPERVISOR: exec_cmd: vm slot_add_binding R5 2 0 PA-GE 
+Aug 10 09:03:07.895 HYPERVISOR: exec_cmd: nio create_udp udp-71fc09dc-9aeb-4b40-9d8e-f3b4d4056f44 10028 127.0.0.1 10029 
+Aug 10 09:03:08.127 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 1 0 udp-71fc09dc-9aeb-4b40-9d8e-f3b4d4056f44 
+Aug 10 09:03:08.128 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 09:03:08.190 HYPERVISOR: exec_cmd: nio create_udp udp-47ee6723-655c-4573-951c-4db5662c721f 10032 127.0.0.1 10033 
+Aug 10 09:03:08.193 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R5 2 0 udp-47ee6723-655c-4573-951c-4db5662c721f 
+Aug 10 09:03:08.193 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 09:11:10.920 HYPERVISOR: exec_cmd: vm set_ghost_status R5 2 
+Aug 10 09:11:10.922 HYPERVISOR: exec_cmd: vm set_ghost_file R5 C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\c7200-adventerprisek9-mz.124-24.T5.image-512.ghost 
+Aug 10 09:11:10.922 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 09:11:10.923 HYPERVISOR: exec_cmd: vm set_config R5 configs\i5_startup-config.cfg 
+Aug 10 09:11:10.924 HYPERVISOR: exec_cmd: vm start R5 
+Aug 10 09:46:40.394 HYPERVISOR: exec_cmd: vm set_ios R5 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 12:06:50.177 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 12:06:50.177 HYPERVISOR: exec_cmd: vm stop R5 
+Aug 10 12:06:50.297 VM: VM R5 shutdown.
+Aug 10 12:06:50.298 HYPERVISOR: exec_cmd: vm extract_config R5 
+Aug 10 12:06:51.260 HYPERVISOR: exec_cmd: vm get_status R5 
+Aug 10 12:06:51.260 HYPERVISOR: exec_cmd: vm extract_config R5 
+Aug 10 12:06:51.261 HYPERVISOR: exec_cmd: vm delete R5 
+Aug 10 12:06:51.261 VM: VM R5 destroyed.
+Aug 10 12:06:51.262 HYPERVISOR: exec_cmd: hypervisor stop 
+Aug 10 12:06:51.635 HYPERVISOR: Stopped.
+Aug 10 12:06:51.635 GENERAL: reset done.

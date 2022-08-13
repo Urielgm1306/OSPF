@@ -1,0 +1,48 @@
+Aug 10 09:03:04.122 HYPERVISOR: Release 0.2.17-x86/Windows (tag 2017072410)
+Aug 10 09:03:04.122 HYPERVISOR: Started on IP = localhost, TCP port = 17177.
+Aug 10 09:03:04.609 HYPERVISOR: exec_cmd: hypervisor version 
+Aug 10 09:03:04.610 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips 
+Aug 10 09:03:04.610 GENERAL: working_dir=C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips
+Aug 10 09:03:04.611 HYPERVISOR: exec_cmd: hypervisor working_dir C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\a6e476b2-aabd-4a44-b7a3-105d087e9e89 
+Aug 10 09:03:04.612 GENERAL: working_dir=C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\a6e476b2-aabd-4a44-b7a3-105d087e9e89
+Aug 10 09:03:04.613 HYPERVISOR: exec_cmd: vm create R4 4 c7200 
+Aug 10 09:03:04.616 VM: VM R4 created.
+Aug 10 09:03:04.618 HYPERVISOR: exec_cmd: vm set_con_tcp_port R4 5004 
+Aug 10 09:03:04.619 HYPERVISOR: exec_cmd: c7200 get_mac_addr R4 
+Aug 10 09:03:04.619 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 09:03:04.620 HYPERVISOR: exec_cmd: vm slot_add_binding R4 0 0 C7200-IO-FE 
+Aug 10 09:03:04.621 HYPERVISOR: exec_cmd: vm set_disk0 R4 0 
+Aug 10 09:03:04.622 HYPERVISOR: exec_cmd: vm set_exec_area R4 64 
+Aug 10 09:03:04.623 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 09:03:04.623 HYPERVISOR: exec_cmd: vm set_idle_pc R4 0x606df838 
+Aug 10 09:03:04.624 HYPERVISOR: exec_cmd: vm set_ios R4 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 09:03:04.624 HYPERVISOR: exec_cmd: c7200 set_mac_addr R4 ca04.0a14.0000 
+Aug 10 09:03:04.624 HYPERVISOR: exec_cmd: vm set_nvram R4 512 
+Aug 10 09:03:04.625 HYPERVISOR: exec_cmd: vm set_ram R4 512 
+Aug 10 09:03:04.625 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 09:03:04.625 HYPERVISOR: exec_cmd: vm slot_add_binding R4 1 0 PA-GE 
+Aug 10 09:03:04.625 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 09:03:04.626 HYPERVISOR: exec_cmd: vm slot_add_binding R4 2 0 PA-GE 
+Aug 10 09:03:08.245 HYPERVISOR: exec_cmd: nio create_udp udp-7fb585a3-c5db-46b7-a04a-5985c5846534 10038 127.0.0.1 10039 
+Aug 10 09:03:08.471 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 1 0 udp-7fb585a3-c5db-46b7-a04a-5985c5846534 
+Aug 10 09:03:08.473 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 09:03:08.536 HYPERVISOR: exec_cmd: nio create_udp udp-b1b8cc6f-6604-42d9-98bf-4ec02db715b7 10042 127.0.0.1 10043 
+Aug 10 09:03:08.538 HYPERVISOR: exec_cmd: vm slot_add_nio_binding R4 2 0 udp-b1b8cc6f-6604-42d9-98bf-4ec02db715b7 
+Aug 10 09:03:08.539 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 09:11:10.923 HYPERVISOR: exec_cmd: vm set_ghost_status R4 2 
+Aug 10 09:11:10.923 HYPERVISOR: exec_cmd: vm set_ghost_file R4 C:\Users\Ugarc\Documents\GNS3\Projects\OSPF_BEST_PRACTICE\OSPF_BEST_PRACTICE\project-files\dynamips\c7200-adventerprisek9-mz.124-24.T5.image-512.ghost 
+Aug 10 09:11:10.924 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 09:11:10.925 HYPERVISOR: exec_cmd: vm set_config R4 configs\i4_startup-config.cfg 
+Aug 10 09:11:10.926 HYPERVISOR: exec_cmd: vm start R4 
+Aug 10 09:46:16.963 HYPERVISOR: exec_cmd: vm set_ios R4 C:/Users/Ugarc/GNS3/images/IOS/c7200-adventerprisek9-mz.124-24.T5.image 
+Aug 10 12:06:50.161 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 12:06:50.161 HYPERVISOR: exec_cmd: vm stop R4 
+Aug 10 12:06:50.293 VM: VM R4 shutdown.
+Aug 10 12:06:50.294 HYPERVISOR: exec_cmd: vm extract_config R4 
+Aug 10 12:06:51.218 HYPERVISOR: exec_cmd: vm get_status R4 
+Aug 10 12:06:51.218 HYPERVISOR: exec_cmd: vm extract_config R4 
+Aug 10 12:06:51.219 HYPERVISOR: exec_cmd: vm delete R4 
+Aug 10 12:06:51.219 VM: VM R4 destroyed.
+Aug 10 12:06:51.220 HYPERVISOR: exec_cmd: hypervisor stop 
+Aug 10 12:06:51.676 HYPERVISOR: Stopped.
+Aug 10 12:06:51.676 GENERAL: reset done.
